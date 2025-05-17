@@ -1,6 +1,6 @@
 
-const PORT = process.env.PORT || 3000;
-const SECRET_ACCESS_TOKEN = process.env.SECRET_ACCESS_TOKEN || 'default_access_token';
+const PORT = process.env.PORT || 4000;
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/e-commerce';
 
 
-export { PORT, SECRET_ACCESS_TOKEN };
+export { PORT,  MONGO_URI };

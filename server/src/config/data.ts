@@ -1,45 +1,45 @@
 const users = [{
     id: 1,
-    name: 'John Doe',
+    username: 'John Doe',
     email: 'john@gmail.com',
     password: 'hashedPassword1',
-    role: 'admin' as const,
+    image: 'https://img.icons8.com/dusk/64/user.png',
     createdAt: new Date(),
     updatedAt: new Date(),
 },
 {
     id: 2,
-    name: 'Jane Smith',
+    username: 'Jane Smith',
     email: 'jane@gmail.com',
     password: 'hashedPassword2',
-    role: 'user' as const,
+    image: 'https://img.icons8.com/dusk/64/user.png',
     createdAt: new Date(),
     updatedAt: new Date(),
 },
 {
     id: 3,
-    name: 'Alice Johnson',
+    username: 'Alice Johnson',
     email: 'alice@gmail.com',
     password: 'hashedPassword3',
-    role: 'user' as const,
+    image: 'https://img.icons8.com/dusk/64/user.png',
     createdAt: new Date(),
     updatedAt: new Date(),
 },
 {
     id: 4,
-    name: 'Bob Brown',
+    username: 'Bob Brown',
     email: 'bob@gmail.com',
     password: 'hashedPassword4',
-    role: 'user' as const,
+    image: 'https://img.icons8.com/dusk/64/user.png',
     createdAt: new Date(),
     updatedAt: new Date(),
 },
 {
     id: 5,
-    name: 'Eva Green',
+    username: 'Eva Green',
     email: 'eva@gmail.com',
     password: 'hashedPassword5',
-    role: 'admin' as const,
+    image: 'https://img.icons8.com/dusk/64/user.png',
     createdAt: new Date(),
     updatedAt: new Date(),
 },
@@ -320,3 +320,5 @@ const products = [{
 }
 
 ];
+
+export { users, products };
