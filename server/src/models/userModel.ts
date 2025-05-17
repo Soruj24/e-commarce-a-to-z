@@ -13,10 +13,10 @@ const userSchema = new mongoose.Schema<IUser>({
     required: true,
     unique: true,
   },
-    image: {
-        type: String,
-        default: "https://img.icons8.com/dusk/64/user.png",
-    },
+  image: {
+    type: String,
+    default: "https://img.icons8.com/dusk/64/user.png",
+  },
   password: {
     type: String,
     required: true,
