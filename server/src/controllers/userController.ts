@@ -87,7 +87,7 @@ const handelCreateUser = async (req: Request<{}, {}, CreateUserBody>, res: Respo
 const handelDeleteUser = async (req: Request<UserParams>, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params;
-        await findUser(id); // Verify user exists
+        await findUser(id); 
         const deletedUser = await deleteUser(id);
 
         return successResponse(res, {

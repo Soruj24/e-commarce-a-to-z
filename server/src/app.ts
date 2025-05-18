@@ -6,6 +6,7 @@ import userRouter from './routes/userRouter';
 import { errorResponse } from './controllers/responsControllers';
 import { HttpError } from './types';
 import categoriesRouter from './routes/CategoriesRouter';
+import productRouter from './routes/productRouter';
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -32,6 +33,7 @@ app.use(morgan("dev"));
 app.use('/api/seed', seedUserRouter);
 app.use('/api/users', userRouter);
 app.use('/api/Categories',categoriesRouter)
+app.use('/api/product',productRouter)
 
 // Route error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
