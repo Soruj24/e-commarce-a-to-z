@@ -6,3 +6,15 @@ export interface IUser {
     isAdmin?: boolean;
     isBenned?: boolean;
 }
+
+export interface PaginationQueryParams {
+    page?: string;
+    limit?: string;
+    search?: string;
+    sort?: string;
+}
+ 
+export interface HttpError extends Error {
+    status?: number;
+    statusCode?: number;
+}
