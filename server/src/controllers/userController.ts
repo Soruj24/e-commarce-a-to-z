@@ -114,8 +114,10 @@ const handelUpdateUser = async (req: Request<UserParams, {}, UpdateUserBody>, re
         const updates: Partial<IUser> = {};
 
         for (const key in req.body) {
-            if (key === "username") {
-                updates.username = req.body.username;
+            if (key === "firstName") {
+                updates.firstName = req.body.firstName;
+            } else if (key === "lastName") {
+                updates.lastName = req.body.lastName;
             } else if (key === "email") {
                 throw createError(400, "You can't update email");
             }

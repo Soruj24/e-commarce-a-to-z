@@ -1,11 +1,24 @@
 export interface IUser {
-    username: string;
+    firstName: string;
+    lastName: string;
     email: string;
     image?: string;
     password: string;
     isAdmin?: boolean;
     isBenned?: boolean;
 }
+
+export interface IProduct {
+  name: string;
+  description: string;
+  price: number;
+  image?: string;
+  category: string;
+  brand: string;
+  rating?: number;
+  numReviews?: number;
+}
+ 
 
 export interface PaginationQueryParams {
     page?: string;
@@ -30,7 +43,8 @@ export interface CreateUserBody {
 }
 
 export interface UpdateUserBody {
-    name?: string;
+    firstName?: string;
+    lastName?: string;
     email?: string;
 }
 

@@ -1,324 +1,194 @@
-const users = [{
-    id: 1,
-    username: 'John Doe',
-    email: 'john@gmail.com',
-    password: 'hashedPassword1',
-    image: 'https://img.icons8.com/dusk/64/user.png',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 2,
-    username: 'Jane Smith',
-    email: 'jane@gmail.com',
-    password: 'hashedPassword2',
-    image: 'https://img.icons8.com/dusk/64/user.png',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 3,
-    username: 'Alice Johnson',
-    email: 'alice@gmail.com',
-    password: 'hashedPassword3',
-    image: 'https://img.icons8.com/dusk/64/user.png',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 4,
-    username: 'Bob Brown',
-    email: 'bob@gmail.com',
-    password: 'hashedPassword4',
-    image: 'https://img.icons8.com/dusk/64/user.png',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 5,
-    username: 'Eva Green',
-    email: 'eva@gmail.com',
-    password: 'hashedPassword5',
-    image: 'https://img.icons8.com/dusk/64/user.png',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-];
-
-const products = [{
-    id: 1,
-    name: 'Product 1',
-    description: 'Description for product 1',
-    price: 100,
-    stock: 50,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 2,
-    name: 'Product 2',
-    description: 'Description for product 2',
-    price: 200,
-    stock: 30,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 3,
-    name: 'Product 3',
-    description: 'Description for product 3',
-    price: 300,
-    stock: 20,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-
-{
-    id: 4,
-    name: 'Product 4',
-    description: 'Description for product 4',
-    price: 400,
-    stock: 10,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 5,
-    name: 'Product 5',
-    description: 'Description for product 5',
-    price: 500,
-    stock: 5,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 6,
-    name: 'Product 6',
-    description: 'Description for product 6',
-    price: 600,
-    stock: 0,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 7,
-    name: 'Product 7',
-    description: 'Description for product 7',
-    price: 700,
-    stock: 15,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 8,
-    name: 'Product 8',
-    description: 'Description for product 8',
-    price: 800,
-    stock: 25,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 9,
-    name: 'Product 9',
-    description: 'Description for product 9',
-    price: 900,
-    stock: 35,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 10,
-    name: 'Product 10',
-    description: 'Description for product 10',
-    price: 1000,
-    stock: 45,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 11,
-    name: 'Product 11',
-    description: 'Description for product 11',
-    price: 1100,
-    stock: 55,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 12,
-    name: 'Product 12',
-    description: 'Description for product 12',
-    price: 1200,
-    stock: 65,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 13,
-    name: 'Product 13',
-    description: 'Description for product 13',
-    price: 1300,
-    stock: 75,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 14,
-    name: 'Product 14',
-    description: 'Description for product 14',
-    price: 1400,
-    stock: 85,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 15,
-    name: 'Product 15',
-    description: 'Description for product 15',
-    price: 1500,
-    stock: 95,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-
-{
-    id: 16,
-    name: 'Product 16',
-    description: 'Description for product 16',
-    price: 1600,
-    stock: 105,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 17,
-    name: 'Product 17',
-    description: 'Description for product 17',
-    price: 1700,
-    stock: 115,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 18,
-    name: 'Product 18',
-    description: 'Description for product 18',
-    price: 1800,
-    stock: 125,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 19,
-    name: 'Product 19',
-    description: 'Description for product 19',
-    price: 1900,
-    stock: 135,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 20,
-    name: 'Product 20',
-    description: 'Description for product 20',
-    price: 2000,
-    stock: 145,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-
-{
-    id: 21,
-    name: 'Product 21',
-    description: 'Description for product 21',
-    price: 2100,
-    stock: 155,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 22,
-    name: 'Product 22',
-    description: 'Description for product 22',
-    price: 2200,
-    stock: 165,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 23,
-    name: 'Product 23',
-    description: 'Description for product 23',
-    price: 2300,
-    stock: 175,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 24,
-    name: 'Product 24',
-    description: 'Description for product 24',
-    price: 2400,
-    stock: 185,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 25,
-    name: 'Product 25',
-    description: 'Description for product 25',
-    price: 2500,
-    stock: 195,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 26,
-    name: 'Product 26',
-    description: 'Description for product 26',
-    price: 2600,
-    stock: 205,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 27,
-    name: 'Product 27',
-    description: 'Description for product 27',
-    price: 2700,
-    stock: 215,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 28,
-    name: 'Product 28',
-    description: 'Description for product 28',
-    price: 2800,
-    stock: 225,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 29,
-    name: 'Product 29',
-    description: 'Description for product 29',
-    price: 2900,
-    stock: 235,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
-{
-    id: 30,
-    name: 'Product 30',
-    description: 'Description for product 30',
-    price: 3000,
-    stock: 245,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+import { faker } from '@faker-js/faker';
+import bcrypt from 'bcryptjs';
+import { v4 as uuidv4 } from 'uuid';
+import { seedCategoriesAdd } from '../controllers/seedController';
+import slugify from 'slugify';
+ 
+interface User {
+    id: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+    avatar: string;
+    isAdmin: boolean;
+    isVerified: boolean;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
-];
+interface Product {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    stock: number;
+    category: ProductCategory;
+    brand: string;
+    image: string;
+    rating: number;
+    createdAt: Date;
+    updatedAt: Date;
+}
+interface Category {
+    id: string;
+    name: string;
+    slug: string;
+    description?: string;
+    image?: string;
+    products: Product[];
+    isActive: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+}
 
-export { users, products };
+enum ProductCategory {
+    ELECTRONICS = 'Electronics',
+    CLOTHING = 'Clothing',
+    HOME = 'Home & Kitchen',
+    BOOKS = 'Books',
+    SPORTS = 'Sports & Outdoors',
+    BEAUTY = 'Beauty & Personal Care',
+}
+
+// Config
+const NUM_USERS = 50;
+const NUM_PRODUCTS = 60;
+const ADMIN_EMAILS = ['admin@example.com', 'superadmin@example.com'];
+
+// Helper Functions
+const generateHashedPassword = async (password: string): Promise<string> => {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(password, salt);
+};
+
+const generateMockUsers = async (): Promise<User[]> => {
+    const users: User[] = [];
+
+    // Generate admin users first
+    for (const email of ADMIN_EMAILS) {
+        const now = new Date();
+        users.push({
+            id: uuidv4(),
+            firstName: 'Admin',
+            lastName: 'User',
+            email,
+            password: await generateHashedPassword('Admin123!'),
+            avatar: faker.image.avatar(),
+            isAdmin: true,
+            isVerified: true,
+            createdAt: now,
+            updatedAt: now,
+        });
+    }
+
+    // Generate regular users
+    for (let i = 0; i < NUM_USERS - ADMIN_EMAILS.length; i++) {
+        const firstName = faker.person.firstName();
+        const lastName = faker.person.lastName();
+        const now = new Date();
+
+        users.push({
+            id: uuidv4(),
+            firstName,
+            lastName,
+            email: faker.internet.email({ firstName, lastName }),
+            password: await generateHashedPassword(`${firstName}${Math.floor(Math.random() * 1000)}!`),
+            avatar: faker.image.avatar(),
+            isAdmin: false,
+            isVerified: faker.datatype.boolean(0.8), // 80% verified
+            createdAt: now,
+            updatedAt: now,
+        });
+    }
+
+    return users;
+};
+
+const generateMockProducts = (): Product[] => {
+    const products: Product[] = [];
+    const categories = Object.values(ProductCategory);
+
+    for (let i = 0; i < NUM_PRODUCTS; i++) {
+        const category = faker.helpers.arrayElement(categories);
+        const now = new Date();
+
+        products.push({
+            id: uuidv4(),
+            name: generateProductName(category),
+            description: faker.commerce.productDescription(),
+            price: parseFloat(faker.commerce.price({ min: 10, max: 1000 })),
+            stock: faker.number.int({ min: 0, max: 100 }),
+            category,
+            brand: faker.company.name(),
+            image: generateProductImage(category),
+            rating: faker.number.float({ min: 1, max: 5, fractionDigits: 1 }),
+            createdAt: now,
+            updatedAt: now,
+        });
+    }
+
+    return products;
+};
+
+const generateProductName = (category: ProductCategory): string => {
+    switch (category) {
+        case ProductCategory.ELECTRONICS:
+            return `${faker.commerce.productAdjective()} ${faker.commerce.product()} ${faker.helpers.arrayElement(['Pro', 'Max', 'Plus', 'Ultra'])}`;
+        case ProductCategory.CLOTHING:
+            return `${faker.commerce.productMaterial()} ${faker.commerce.product()} ${faker.helpers.arrayElement(['Edition', 'Limited', 'Premium'])}`;
+        default:
+            return faker.commerce.productName();
+    }
+};
+
+const generateProductImage = (category: ProductCategory): string => {
+    const width = 400;
+    const height = 400;
+
+    switch (category) {
+        case ProductCategory.ELECTRONICS:
+            return faker.image.urlLoremFlickr({ width, height, category: 'electronics' });
+        case ProductCategory.CLOTHING:
+            return faker.image.urlLoremFlickr({ width, height, category: 'fashion' });
+        case ProductCategory.HOME:
+            return faker.image.urlLoremFlickr({ width, height, category: 'home' });
+        case ProductCategory.BOOKS:
+            return faker.image.urlLoremFlickr({ width, height, category: 'books' });
+        default:
+            return faker.image.urlLoremFlickr({ width, height });
+    }
+};
+
+// Generate mock categories
+const generateMockCategories = (): Category[] => {
+    const categories: Category[] = [];
+    const now = new Date();
+
+    for (const category of Object.values(ProductCategory)) {
+        categories.push({
+            id: uuidv4(),
+            name: category,
+            slug: slugify(category, { lower: true }),
+            description: faker.commerce.productDescription(),
+            image: faker.image.urlLoremFlickr({ width: 640, height: 480, category }),
+            products: [],
+            isActive: true,
+            createdAt: now,
+            updatedAt: now,
+        });
+    }
+
+    return categories;
+};
+
+// Main Export
+export const generateMockData = async () => {
+    return {
+        users: await generateMockUsers(),
+        products: generateMockProducts(),
+        ProductCategory : generateMockCategories()
+    };
+};
+
+export type { User, Product };

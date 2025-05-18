@@ -1,7 +1,7 @@
 const express = require('express');
 import { Request, Response, NextFunction } from 'express';
 import createError from 'http-errors';
-import seedUserRouter from './routes/seedUserRouter';
+import seedUserRouter from './routes/seedRouter';
 import userRouter from './routes/userRouter';
 import { errorResponse } from './controllers/responsControllers';
 import { HttpError } from './types';

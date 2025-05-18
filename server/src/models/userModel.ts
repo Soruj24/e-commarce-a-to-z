@@ -4,7 +4,11 @@ import { IUser } from "../types";
 
 
 const userSchema = new mongoose.Schema<IUser>({
-  username: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },
