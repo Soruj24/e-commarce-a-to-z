@@ -15,7 +15,13 @@ const cors = require('cors');
 const app = express();
 
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'http://localhost:5173',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true,
+    }
+));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -32,8 +38,8 @@ app.use(morgan("dev"));
 
 app.use('/api/seed', seedUserRouter);
 app.use('/api/users', userRouter);
-app.use('/api/Categories',categoriesRouter)
-app.use('/api/product',productRouter)
+app.use('/api/Categories', categoriesRouter)
+app.use('/api/product', productRouter)
 
 // Route error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
