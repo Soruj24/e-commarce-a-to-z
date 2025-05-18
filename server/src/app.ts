@@ -5,6 +5,9 @@ import seedUserRouter from './routes/seedUserRouter';
 import userRouter from './routes/userRouter';
 import { errorResponse } from './controllers/responsControllers';
 import { HttpError } from './types';
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
 const cors = require('cors');
 const app = express();
@@ -14,6 +17,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 5, // limit each IP to 5 requests per windowMs
+    message: 'Too many requests from this IP, please try again after 15 minutes',
+});
+
+app.use(limiter);
+app.use(helmet());
+app.use(morgan("dev"));
 app.use('/api/seed', seedUserRouter);
 app.use('/api/users', userRouter);
 
