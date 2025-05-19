@@ -73,7 +73,7 @@ const generateMockUsers = async (): Promise<User[]> => {
             firstName: 'Admin',
             lastName: 'User',
             email,
-            password: await generateHashedPassword('Admin123!'),
+            password: await generateHashedPassword('b2hSoruj80$'),
             avatar: faker.image.avatar(),
             isAdmin: true,
             isVerified: true,
